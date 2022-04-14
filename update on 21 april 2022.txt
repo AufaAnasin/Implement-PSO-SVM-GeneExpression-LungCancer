@@ -1,0 +1,38 @@
+SVM => linear, poly, rbf
+Ensemble => RandomForestRegressor, AdaBoostReg, XGBoostReg
+RLR => linear, Ridge, Lasso, ElasticNet
+
+
+Feature Selection
+GA(default_param)
+20 kali
+
+run 1 => selected_feature, best_score, curve
+run 2 => selected_feature, best_score, curve
+...
+run 20 => selected_feature, best_score, curve
+
+1. run di file berbeda
+2. iteration
+list_GA = []
+algo_object = ....
+
+list_GA.append(algo_object)
+
+SVM
+linear => selected feature + best_score 20 run
+poly => selected feature + best_score 20 run
+rbf => selected feature + best_score 20 run
+
+list_GA.pkl
+
+GA utk linear
+zoofs
+
+
+
+model = SVM(kernel="linear")
+
+
+
+
