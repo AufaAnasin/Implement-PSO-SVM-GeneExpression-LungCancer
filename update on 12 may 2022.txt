@@ -1,0 +1,55 @@
+Multiple run => Done
+
+Kernel 
+linear => best selected feature
+...
+
+
+# before Hyperparameter Tuning
+X_train_sel = X_train[sel_feat]
+y_train
+model = SVR(kernel='linear')
+
+
+kfold = KFold(n_splits=10, random_state=46, shuffle=False)
+
+score = cross_val_score(model, X_train_sel, y_train, cv=kfold, scoring='r2_score')
+score = np.average(score)
+
+# after HT
+
+parameter? range?
+
+grid = GridSearchCV(....., refit=True)
+
+best_model = grid.best_estimator_
+
+kfold = KFold(n_splits=10, random_state=46, shuffle=False)
+
+score = cross_val_score(best_model, X_train_sel, y_train, cv=kfold, scoring='r2_score')
+score = np.average(score)
+
+
+
+k_range = [100, 200, ..., 10000]
+for i in k_range:
+selector = SelectKBest(score_func='chi2', k=i)
+selector.fit(X_train) => feature_name
+get_feature_names_out
+
+#X_train_new = selector.transform(X_train) => array
+
+X_train_new = X_train[feature_name]
+
+cross_val_score (scoring='accuracy')
+score
+
+
+k = 100 => score?
+k = 200 => score?
+=> plot k vs score
+
+
+
+
+
