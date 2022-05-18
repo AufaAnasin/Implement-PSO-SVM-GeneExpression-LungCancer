@@ -1,0 +1,115 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12800\viewh14580\viewkind1
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Feature selection => hold out -> cv\
+\
+zoo-fs\
+\
+X_train, y_train, X_valid (dummy), y_valid (dummy)\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 def objective_function_topass(model,X_train, y_train, X_valid, y_valid):      \
+    P = cross_val_score(model, X_train, y_train, cv=10, score=\'93r2\'94)\
+    P = np.average(P)\
+    # model.fit(X_train,y_train)  \
+    # P=log_loss(y_valid,model.predict_proba(X_valid))\
+    return P\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+regresi => score = \'93r2\'94\
+klasifikasi => score = \'93accuracy\'94\
+\
+Jumlah data < 500 => cv = 10\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Jumlah data 500 < x < 1000 => cv = 5\
+Jumlah data > 1000 => cv = 3\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+score_weight = 0.8\
+feat_num_weight = 0.2\
+\
+py-fs\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 test_X(dummy); test_Y(dummy)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+def compute_accuracy(agent, train_X, test_X, train_Y, test_Y): \
+    # compute classification accuracy of the given agents\
+    cols = np.flatnonzero(agent)     \
+    if(cols.shape[0] == 0):\
+        return 0    \
+    clf = ...\
+\
+    train_data = train_X[:,cols]\
+    train_label = train_Y\
+    test_data = test_X[:,cols]\
+    test_label = test_Y\
+\
+    # clf.fit(train_data,train_label)\
+    # acc = clf.score(test_data,test_label)\
+   \
+    acc = cross_val_score(model, train_data, train_label, cv=10, score=\'93accuracy\'94)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0     acc = np.average(acc)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+    return acc\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 score_weight\
+feat_num_weight\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+data_set -> train + test\
+X_train, y_train\
+X_test, y_test\
+\
+Var_Threshold\
+\
+scaler = StandardScaler().fit(X_train)\
+X_train_scaled = scaler.transform(X_train)\
+X_test_scaled = scaler.transform(X_test)\
+\
+Feature Selection\
+Hyperparameter Tuning\
+\
+\
+cv=10\
+\
+cv=kfold XXX\
+\
+\
+\
+\
+conv_layer = [1, 2, 3, 4]\
+FC_layer_node = [32 - 128]\
+int(batas bawas + (x[0] * rentang))\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 rentang =  batas atas - batas bawah\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+x[0] = 2\
+x[1] - x[4] => filter_size \
+x[5] - x[8] => filter no\
+\
+X_new = SelectKBest(chi2, k=20).fit_transform(X, y)\
+=> feat\
+X_slice = X_train[feat]\
+cross_val_score(\'85.., X_slice,  cv, \'85.)\
+\
+k => cv_score\
+5 => \'85\
+10\
+15\
+\'85\
+50 }
