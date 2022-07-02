@@ -1,0 +1,25 @@
+saya ingin memecahkan masalah di dunia kerja dengan ilmu yang saya dapat semasa kuliah di kampus saya, dan saya berharap 
+saya berkembang dengan hal itu. komitmen saya untuk internship ini adalah saya akan memaksimalkan diri saya untuk belajar dan
+berkembang dalam mengerjakan amanah dari supervisor dan team. 
+
+kesibukan saya saat ini adalah saya sedang mengerjakan tugas akhir saya yang berkaitan dengan Data Science Bioinformatik, di tugas 
+akhir ini, saya memperoleh data dari NCBI ( National Center for Biotechnology Information ) dan diolah mulai dari Data Preparation
+Classification, sampai nanti Model Deploying
+
+Project/event paling menarik yang pernah saya ada dua. yang menarik pertama adalah TA saya, di Tugas Akhir saya, tentu saja 
+pola pengerjaan di setiap data science ber-beda beda caranya, saya mulai mengerjakan dari Data Cleaning sampai saat ini untuk minggu
+ke 11 saya sudah berada di taha Feature Selection. di feature selection ada kendala seperti cara pemakaian library nature inspire nya,
+method apa2 saja untuk data cleaning nya. pada saat menghadapi hal tersebut, saya terlebih dahulu riset di internet error nya, 
+apabila ada tinggal saya aplikasikan, apabila trernyata cukup sulit untuk dikerjakan, saya berkonsultasi bersama teman saya sesama
+kelas TA dan apabila solve rasanya sangat legaa, jadinya bisa melanjutkan ke tahap berikutnyaa agar cepat selesai tiap tahap. 
+yang kedua adalah menjadi Coach di AIESEC future leader, saya diberi amanah menjadi coach agar mendamping mereka, 
+monitoring perkembangan dengan coach tracker, nah di Coach Tracker AIESEC itu sangat detail sekali menilai tiap mentee nya, pada
+saat saya bingung, saya aktif bertanya dengan OCProgram, dan ocp nya menjelaskan sangat detail sehingga saya paham dan lancar
+mengerjakan nya, mungkin itu project yang menarik yang pernah saya lalui
+
+untuk Tools
+HTML : 7 
+CSS : 7 
+Stled-Components : 7
+React JS : 7
+Python (Scikit Learn, Pandas) : 7
